@@ -36,12 +36,14 @@ https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/ab
 [cmdletBinding()]
 param(
 [Parameter(Mandatory=$true)]
+[ValidateSet(4624,4625,4634)]
 [int]$EventId,
 
 [int]$Newest = 10,
 
 [string]$ComputerName = "localhost"
 )
+
 Write-Verbose -Message "ZusatzInfo:"
 Write-Verbose -Message "EventId: $EventId"
 Write-Verbose -Message "Newest: $Newest"

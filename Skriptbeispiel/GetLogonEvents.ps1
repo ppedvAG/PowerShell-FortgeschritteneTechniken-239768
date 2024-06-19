@@ -38,9 +38,9 @@ param(
 [Parameter(Mandatory=$true)]
 [ValidateSet(4624,4625,4634)]
 [int]$EventId,
-
+[ValidateRange(5,10)]
 [int]$Newest = 10,
-
+[ValidateScript({Test-NetConnection -ComputerName $PSItem -CommonTCPPort WINRM -InformationLevel Quiet})]
 [string]$ComputerName = "localhost"
 )
 

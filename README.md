@@ -10,3 +10,8 @@ Agenda:
 - Functions
 - Skript Module
 - ModulManifest
+- cmdletBinding
+- Advanced Parameters
+- Nutzung von .Net
+- Class
+- Enum

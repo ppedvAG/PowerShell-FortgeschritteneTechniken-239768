@@ -40,8 +40,7 @@ if(Test-Path -Path $TestFilesDirPath -PathType Container)
     }
     else
     {
-        Write-Host -Object "Ordner bereits vorhanden" -ForegroundColor Red
-        exit
+       throw (Get-Item $TestFilesDirPath)
     }
 }
 #Anlegen von TestfilesDir
